@@ -6,17 +6,17 @@ from database_init.read_config import read_db_config
 class DatabaseConnectionPool(object):
     INSTANCE = None
 
-    def __init__(self):
+    def __init__(self,filename='../resources/db_properties.ini'):
         if self.INSTANCE is not None:
             raise ValueError("An instantiation already exists!")
         else:
-            db_config = read_db_config(filename='../resources/db_properties.ini')
+            db_config = read_db_config(filename)
             self.__cnxPool = MySQLConnectionPool(pool_name="myPool", pool_size=5, **db_config)
 
     @classmethod
-    def get_instance(cls):
+    def get_instance(cls,filename='../resources/db_properties.ini'):
         if cls.INSTANCE is None:
-            cls.INSTANCE = DatabaseConnectionPool()
+            cls.INSTANCE = DatabaseConnectionPool(filename)
         return cls.INSTANCE;
 
     def get_connection(self):
@@ -24,5 +24,5 @@ class DatabaseConnectionPool(object):
 
 
 if __name__ == "__main__":
-    conn = DatabaseConnectionPool.get_instance().get_connection()
+    conn = DatabaseConnectionPool.get_instance(filename='../resources/db_properties.ini').get_connection()
     print("conn", conn)

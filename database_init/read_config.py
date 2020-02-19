@@ -1,4 +1,7 @@
+import sys
 from configparser import ConfigParser
+
+from PyQt5.QtWidgets import QMessageBox, QWidget
 
 
 def read_db_config(filename='sql.ini'):
@@ -23,8 +26,11 @@ def read_db_config(filename='sql.ini'):
 
 
 if __name__ == "__main__":
-    db = read_db_config()
-    print(db)
+    # db = read_db_config()
+    # print(db)
 
-    db = read_db_config(filename='../resources/db_properties.ini')
-    print(db)
+    try:
+        db = read_db_config(filename='../resources/db_properties')
+    except Exception as err:
+        print("error", err)
+
