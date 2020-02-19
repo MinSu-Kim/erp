@@ -6,7 +6,7 @@ from database_init.read_config import read_db_config
 
 
 class DbInit:
-    def __init__(self, filename='sql.ini'):
+    def __init__(self, filename='insert_sql.ini'):
         self._db = read_db_config(filename)
 
     def __create_database(self, con):
