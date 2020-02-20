@@ -63,12 +63,11 @@ class DbInit:
             self.__create_database(con)
             self.__create_table(con)
             self.__create_user(con)
-            DatabaseConnectionPool.get_connection_pool_close()
         except mysql.connector.Error as err:
             raise err
         finally:
             con.close()
-            con = None
+            DatabaseConnectionPool.get_connection_pool_close()
 
 
 if __name__ == "__main__":

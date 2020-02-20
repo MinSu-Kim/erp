@@ -18,7 +18,7 @@ class BackupRestore:
     def backup_data(self):
         self.__backup_data()
 
-    def __backup_data(self, data_dir='backup', sql_filename='../resources/select_sql.ini'):
+    def __backup_data(self, data_dir='../restore_backup/backup', sql_filename='../resources/select_sql.ini'):
         self.__check_exists_dir(data_dir)
         sql_info = read_db_config(sql_filename)
         print(sql_info)
@@ -41,6 +41,7 @@ class BackupRestore:
     def __backup_query(self, data_dir, select_sql, table_name):
         try:
             file_name = "{}/{}.txt".format(data_dir, table_name)
+            print(file_name)
             con = DatabaseConnectionPool.get_instance(filename=self.db_conf).get_connection()
             print("__backup_query-----------", self.db_conf)
             cursor = con.cursor()
@@ -69,6 +70,7 @@ class BackupRestore:
 
     def __load_data(self, con=None, sql_filename='../resources/insert_sql.ini'):
         _db = read_db_config(sql_filename)
+        print("__load_data ", _db)
         try:
             cursor = con.cursor()
             for table_name, table_sql in _db.items():
@@ -114,6 +116,7 @@ class BackupRestore:
             self.__load_data(con)
             self.__load_img(con)
         except mysql.connector.Error as err:
+            print(err)
             raise err
         finally:
             con.close()
