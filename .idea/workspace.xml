@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55419e9d-3682-4bc9-83ce-5c2c8c6d41dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/erp_application.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/custom_table_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/department_table_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/table_view/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/table_view/custom_table_view.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/table_view/department_table_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/Department.py" beforeDir="false" afterPath="$PROJECT_DIR$/dto/Department.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/Employee.py" beforeDir="false" afterPath="$PROJECT_DIR$/dto/Employee.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dto/Title.py" beforeDir="false" afterPath="$PROJECT_DIR$/dto/Title.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restore_backup/restore_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/restore_backup/restore_sql.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/script/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/table_view.ui" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +20,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="net94 &lt;net94.teacher@gmail.com&gt;" />
         <option value="teacher &lt;net94.teacher@gmail.com&gt;" />
       </list>
     </option>
@@ -284,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582174481166</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="기본 model, tableView 테스트 완료 이후 model, tableView 추상화하기">
+      <created>1582187797832</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582187797832</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -302,7 +297,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="테스트 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="테스트 완료" />
+    <MESSAGE value="기본 model, tableView 테스트 완료 이후 model, tableView 추상화하기" />
+    <option name="LAST_COMMIT_MESSAGE" value="기본 model, tableView 테스트 완료 이후 model, tableView 추상화하기" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2416" y="30" key="CommitChangelistDialog2" timestamp="1582174950213">
