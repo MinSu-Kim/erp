@@ -46,7 +46,7 @@ class MyApp(QWidget):
 
 
 if __name__ == '__main__':
-    # setting.ui가 있는 위치를 기준으로 작성해야 됨.
+    # erp_setting.py가 있는 위치를 기준으로 작성해야 됨.
     app = QApplication([])
     w = MyApp()
     app.exec()
