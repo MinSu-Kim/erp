@@ -11,7 +11,7 @@ class DatabaseConnectionPool(object):
             raise ValueError("An instantiation already exists!")
         else:
             db_config = read_db_config(filename)
-            self.__cnxPool = MySQLConnectionPool(pool_name="myPool", pool_size=5, **db_config)
+            self.__cnxPool = MySQLConnectionPool(pool_name="myPool", pool_size=10, **db_config)
 
     @classmethod
     def get_instance(cls, filename='../resources/db_properties.ini', ):
@@ -24,7 +24,7 @@ class DatabaseConnectionPool(object):
         return self.__cnxPool.get_connection()
 
     @classmethod
-    def get_connection_pool_close(cls):
+    def pool_close(cls):
         cls.INSTANCE = None;
 
 

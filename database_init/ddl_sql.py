@@ -68,7 +68,7 @@ class DbInit:
             raise err
         finally:
             con.close()
-            DatabaseConnectionPool.get_connection_pool_close()
+            DatabaseConnectionPool.pool_close()
 
 
 if __name__ == "__main__":
