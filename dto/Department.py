@@ -45,7 +45,6 @@ class Department():
             str_format += '{!r},'
         str_format = str_format[:len(str_format) - 1] + ')'
         return str_format.format(class_name, *self)
-        # return '{}({!r}, {!r}, {!r})'.format(class_name, *self)
 
     def __hash__(self):
         return hash(self.__dept_no) ^ hash(self.__dept_name) ^ hash(self.__floor)

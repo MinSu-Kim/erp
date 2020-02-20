@@ -45,12 +45,11 @@ if __name__ == "__main__":
     t1.title_no = 2
     t1.title_name = '부장'
     print(t1)
-    print(dir(t1))
-    print(t1.__dict__)
+
     t2 = Title(title_no=1, title_name='인턴')
     print(t2)
-    titleList = [Title(), Title(title_no=1), Title(title_no=1, title_name='영업')]
 
+    titleList = [Title(), Title(title_no=1), Title(title_no=1, title_name='영업')]
     for obj in titleList:
         print(obj)
 
@@ -61,5 +60,3 @@ if __name__ == "__main__":
     for title in set([t1, t2, t3]):
         print(title)
 
-    t4 = (1, 2, 3, None)
-    print(t4.__slots__)

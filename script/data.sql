@@ -28,8 +28,6 @@ insert into employee(emp_no, emp_name, title, manager, salary, dept, pass, hire_
 select * from employee;
 
 /* 우분투 MySQL Timezone 설정방법
-
-
 select @@global.time_zone, @@session.time_zone;
 
 select b.name,a.time_zone_id
@@ -45,6 +43,10 @@ set GLOBAL time_zone='Asia/Seoul';
 set time_zone = 'Asia/Seoul';
 
 select @@system_time_zone;
-
+만약 MySQL이 설치되는 OS가 Windows 계열 또는 HP/UX 등이라면 MySQL 사에서 제공하는
+MyISAM 파일들을 http://dev.mysql.com/downloads/timezones.html 에서 다운 받은 다음
+MySQL 데이터베이스를 중단시키고 'mysql' 서브디렉토리에 직접 복사해 넣어야 한다.
+https://dev.mysql.com/doc/refman/5.7/en/time-zone-support.html#time-zone-installation 참조
 */
+
 select * from employee;

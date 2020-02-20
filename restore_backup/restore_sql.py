@@ -89,6 +89,7 @@ class BackupRestore:
             for f in os.scandir(data_dir):
                 data = self.__read_file(os.path.abspath(f))
                 img_file = os.path.basename(f).split('.')[0]
+                print('__load_img----------------', data, img_file)
                 try:
                     cursor = con.cursor()
                     cursor.execute(query, (data, img_file))

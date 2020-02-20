@@ -4,7 +4,7 @@ from dto.Title import Title
 
 class Employee():
     def __init__(self, **kwargs):
-        self.__emp_no = kwargs['emp_no']
+        self.__emp_no = int(kwargs['emp_no'])
         self.__emp_name = kwargs['emp_name'] if 'emp_name' in kwargs else None
         self.__gender = kwargs['gender'] if 'gender' in kwargs else None
         self.__dept = kwargs['dept'] if 'dept' in kwargs else None
@@ -21,7 +21,7 @@ class Employee():
 
     @emp_no.setter
     def emp_no(self, emp_no):
-        self.__emp_no = emp_no
+        self.__emp_no = int(emp_no)
 
     @property
     def emp_name(self):
@@ -61,7 +61,7 @@ class Employee():
 
     @salary.setter
     def salary(self, salary):
-        self.__salary = salary
+        self.__salary = int(salary)
 
     @property
     def title(self):
@@ -113,21 +113,14 @@ if __name__ == "__main__":
              'manager': Employee(**{'emp_no': 1}),
              'salary': 1500000, 'title': Title(title_no=1), 'hire_date': '2020-02-18'}
 
-    t1 = Employee(**kargs)
-    t2 = Employee(**kargs)
-    print(t1 == t2)
-    print(t1)
+    empList = [Employee(**kargs), Employee(**kargs)]
+
+    [print(e) for e in empList]
+
+    print(empList[0] == empList[1])
+
     print(Employee(**{'emp_no': 1, 'emp_name': '김민수'}))
-    # t2 = Title(title_no=1, title_name='인턴')
-    # print(t2)
-    # titleList = [Title(), Title(title_no=1), Title(title_no=1, title_name='영업')]
-    #
-    # for obj in titleList:
-    #     print(obj)
-    #
-    # t3 = Title(title_no=1, title_name='인턴')
-    # print(t2 == t3)             # __iter__
-    # print(set([t1, t2, t3]))    # __hash__
-    #
-    # for title in set([t1, t2, t3]):
-    #     print(title)
+
+    # print(empList[0].__dict__)
+    for key, value in empList[0].__dict__.items():
+        print(key, type(value), value)
