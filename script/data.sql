@@ -23,3 +23,28 @@ insert into employee(emp_no, emp_name, title, manager, salary, dept, pass, hire_
 (3011, '이수민', 2, 4377, 4000000, 3, password('1234567'), '2010-04-13', FALSE),
 (2106, '김창섭', 4, 1003, 2500000, 2, password('1234567'), '2016-05-14', TRUE),
 (3427, '최종철', 5, 3011, 1500000, 3, password('1234567'), '2017-06-15', TRUE);
+
+
+select * from employee;
+
+/* 우분투 MySQL Timezone 설정방법
+
+
+select @@global.time_zone, @@session.time_zone;
+
+select b.name,a.time_zone_id
+from mysql.time_zone a, mysql.time_zone_name b
+where a.time_zone_id = b.time_zone_id
+and b.name like '%Seoul';
+select count(*) from mysql.time_zone;
+
+select @@system_time_zone;
+
+
+set GLOBAL time_zone='Asia/Seoul';
+set time_zone = 'Asia/Seoul';
+
+select @@system_time_zone;
+
+*/
+select * from employee;

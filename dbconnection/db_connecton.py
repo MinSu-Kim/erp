@@ -14,13 +14,18 @@ class DatabaseConnectionPool(object):
             self.__cnxPool = MySQLConnectionPool(pool_name="myPool", pool_size=5, **db_config)
 
     @classmethod
-    def get_instance(cls,filename='../resources/db_properties.ini'):
+    def get_instance(cls, filename='../resources/db_properties.ini'):
+        print("get_instance() ------------", filename)
         if cls.INSTANCE is None:
             cls.INSTANCE = DatabaseConnectionPool(filename)
         return cls.INSTANCE;
 
     def get_connection(self):
         return self.__cnxPool.get_connection()
+
+    @classmethod
+    def get_connection_pool_close(cls):
+        cls.INSTANCE = None;
 
 
 if __name__ == "__main__":

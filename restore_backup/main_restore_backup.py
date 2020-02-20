@@ -1,13 +1,13 @@
-from restore_backup.backup_restore import BackupRestore
+from restore_backup.restore_sql import BackupRestore
 
 if __name__ == "__main__":
     backup_restore = BackupRestore()
     # backup_restore.data_backup('product')
     # backup_restore.data_backup('sale')
 
-    backup_restore.data_restore('department')
-    backup_restore.data_restore('title')
-    backup_restore.data_restore('employee')
+    # backup_restore.data_restore('department')
+    # backup_restore.data_restore('title')
+    # backup_restore.data_restore('employee')
 
 
 """

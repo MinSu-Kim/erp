@@ -7,7 +7,9 @@ from database_init.read_config import read_db_config
 
 class DbInit:
     def __init__(self, filename='insert_sql.ini'):
+        print(filename)
         self._db = read_db_config(filename)
+        print(self._db)
 
     def __create_database(self, con):
         try:
@@ -55,22 +57,25 @@ class DbInit:
             cursor.close()
 
     def init(self):
+        print("init()-call")
         try:
             con = DatabaseConnectionPool.get_instance().get_connection()
             self.__create_database(con)
             self.__create_table(con)
             self.__create_user(con)
+            DatabaseConnectionPool.get_connection_pool_close()
         except mysql.connector.Error as err:
             raise err
         finally:
             con.close()
+            con = None
 
 
 if __name__ == "__main__":
     conn = DatabaseConnectionPool.get_instance().get_connection()
     print("conn", conn)
 
-    db = DbInit(filename='sql.ini')
+    db = DbInit(filename='../resources/sql.ini')
     # db = DbInit(filename='../resources/db_properties.ini')
     db.init()
 
