@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55419e9d-3682-4bc9-83ce-5c2c8c6d41dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/title_table_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/table_view/title_table_view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erp_application.py" beforeDir="false" afterPath="$PROJECT_DIR$/erp_application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/custom_table_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/custom_table_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table_view/custom_table_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/table_view/custom_table_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table_view/department_table_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/table_view/department_table_view.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +25,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="net94 &lt;net94.teacher@gmail.com&gt;" />
         <option value="teacher &lt;net94.teacher@gmail.com&gt;" />
+        <option value="net94 &lt;net94.teacher@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,23 +41,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/table_view" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\pycharm_workspace\pyqt_erp\model" />
-      <recent name="D:\pycharm_workspace\pyqt_erp\table_view" />
-      <recent name="D:\pycharm_workspace\pyqt_erp\restore_backup\backup\img" />
-      <recent name="D:\workspace_python\erp\resources" />
-      <recent name="D:\workspace_python\erp\dbconnection" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\pycharm_workspace\pyqt_erp" />
       <recent name="D:\workspace_python\erp\resources" />
       <recent name="D:\workspace_python\erp\dbconnection" />
       <recent name="D:\workspace_python\erp" />
       <recent name="D:\workspace_python\erp\database_init" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace_python\pyqt_erp\table_view" />
+      <recent name="D:\pycharm_workspace\pyqt_erp\model" />
+      <recent name="D:\pycharm_workspace\pyqt_erp\table_view" />
+      <recent name="D:\pycharm_workspace\pyqt_erp\restore_backup\backup\img" />
+      <recent name="D:\workspace_python\erp\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Python.erp_application">
@@ -140,6 +145,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="department_table_view" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="erp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/table_view" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/table_view/department_table_view.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="erp_application" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="erp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,27 +179,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/erp_application.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="erp_setting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="erp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/erp_setting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,10 +233,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.erp_application" />
+        <item itemvalue="Python.department_table_view" />
         <item itemvalue="Python.Employee" />
         <item itemvalue="Python.Department" />
         <item itemvalue="Python.Title" />
-        <item itemvalue="Python.erp_setting" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582187797832</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="기본 model, tableView 테스트 완료 이후 model, tableView 추상화하기">
+      <created>1582205806713</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582205806713</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,47 +301,51 @@
     <option name="LAST_COMMIT_MESSAGE" value="기본 model, tableView 테스트 완료 이후 model, tableView 추상화하기" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2416" y="30" key="CommitChangelistDialog2" timestamp="1582174950213">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="574" y="132" key="#com.intellij.ide.util.MemberChooser" timestamp="1582207686599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="132" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1582207686599" />
+    <state x="397" y="20" key="CommitChangelistDialog2" timestamp="1582205805810">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="2416" y="30" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582174950213" />
-    <state x="397" y="24" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582030250326" />
+    <state x="397" y="20" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582205805810" />
     <state x="2565" y="231" key="FileChooserDialogImpl" timestamp="1582174892471">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="516" y="183" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582173651285" />
     <state x="2565" y="231" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582174892471" />
     <state x="516" y="183" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582030166136" />
-    <state width="1876" height="291" key="GridCell.Tab.0.bottom" timestamp="1582174502349">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1492" height="148" key="GridCell.Tab.0.bottom" timestamp="1582210130723">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1097" height="291" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582173714713" />
     <state width="1876" height="291" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582174502349" />
-    <state width="1357" height="291" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582030216833" />
-    <state width="1876" height="291" key="GridCell.Tab.0.center" timestamp="1582174502349">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1492" height="148" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582210130723" />
+    <state width="1492" height="148" key="GridCell.Tab.0.center" timestamp="1582210130723">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1097" height="291" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582173714713" />
     <state width="1876" height="291" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582174502349" />
-    <state width="1357" height="291" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582030216833" />
-    <state width="1876" height="291" key="GridCell.Tab.0.left" timestamp="1582174502349">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1492" height="148" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582210130723" />
+    <state width="1492" height="148" key="GridCell.Tab.0.left" timestamp="1582210130723">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1097" height="291" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582173714713" />
     <state width="1876" height="291" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582174502349" />
-    <state width="1357" height="291" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582030216833" />
-    <state width="1876" height="291" key="GridCell.Tab.0.right" timestamp="1582174502349">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1492" height="148" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582210130723" />
+    <state width="1492" height="148" key="GridCell.Tab.0.right" timestamp="1582210130723">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1097" height="291" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582173714713" />
     <state width="1876" height="291" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582174502349" />
-    <state width="1357" height="291" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582030216833" />
-    <state x="156" y="52" key="SettingsEditor" timestamp="1582205716940">
+    <state width="1492" height="148" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582210130723" />
+    <state x="156" y="52" key="SettingsEditor" timestamp="1582205830778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="156" y="52" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1582173664415" />
     <state x="2169" y="145" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582174914641" />
-    <state x="156" y="52" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582205716940" />
+    <state x="156" y="52" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582205830778" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1582016321318">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
