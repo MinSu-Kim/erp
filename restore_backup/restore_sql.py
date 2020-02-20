@@ -18,7 +18,7 @@ class BackupRestore:
     def backup_data(self):
         self.__backup_data()
 
-    def __backup_data(self, data_dir='../restore_backup/backup', sql_filename='../resources/select_sql.ini'):
+    def __backup_data(self, data_dir='restore_backup/backup', sql_filename='resources/select_sql.ini'):
         self.__check_exists_dir(data_dir)
         sql_info = read_db_config(sql_filename)
         print(sql_info)
@@ -68,7 +68,7 @@ class BackupRestore:
             cursor.close()
             con.close()
 
-    def __load_data(self, con=None, sql_filename='../resources/insert_sql.ini'):
+    def __load_data(self, con=None, sql_filename='resources/insert_sql.ini'):
         _db = read_db_config(sql_filename)
         print("__load_data ", _db)
         try:
@@ -83,7 +83,7 @@ class BackupRestore:
         finally:
             cursor.close()
 
-    def __load_img(self, con=None, data_dir='../restore_backup/backup/img', query='update employee set pic=%s where emp_no=%s'):
+    def __load_img(self, con=None, data_dir='restore_backup/backup/img', query='update employee set pic=%s where emp_no=%s'):
 
         if os.path.exists(data_dir):
             for f in os.scandir(data_dir):

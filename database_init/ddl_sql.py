@@ -6,9 +6,10 @@ from database_init.read_config import read_db_config
 
 
 class DbInit:
-    def __init__(self, filename='insert_sql.ini'):
+    def __init__(self, filename='insert_sql.ini', db_con_info=None):
         print(filename)
         self._db = read_db_config(filename)
+        self._db_con_info=db_con_info
         print(self._db)
 
     def __create_database(self, con):
@@ -59,7 +60,7 @@ class DbInit:
     def init(self):
         print("init()-call")
         try:
-            con = DatabaseConnectionPool.get_instance().get_connection()
+            con = DatabaseConnectionPool.get_instance(self._db_con_info).get_connection()
             self.__create_database(con)
             self.__create_table(con)
             self.__create_user(con)

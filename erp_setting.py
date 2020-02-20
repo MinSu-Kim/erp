@@ -8,9 +8,9 @@ from restore_backup.restore_sql import BackupRestore
 class MyApp(QWidget):
     def __init__(self):
         super().__init__() #생략하면 안됨(UI만 로딩되며 버튼동작하지 않음
-        self.ui = uic.loadUi("setting.ui")
-        self.db_init = DbInit(filename='../resources/sql.ini')
-        self.backup_restore = BackupRestore(db_conf='../resources/user_properties.ini')
+        self.ui = uic.loadUi('ui/erp_setting.ui')
+        self.db_init = DbInit(filename='resources/sql.ini', db_con_info='resources/db_properties.ini')
+        self.backup_restore = BackupRestore(db_conf='resources/user_properties.ini')
         self.init_ui()
 
     def init_ui(self):
@@ -30,7 +30,6 @@ class MyApp(QWidget):
     def btn_import(self):
         print("btn_import()")
         try:
-            # self.backup_restore.load_data(query='update employee set pic=%s where emp_no=%s')
             self.backup_restore.load_data()
             QMessageBox.about(self, "로드 완료", "데이터 로드 완료")
         except Exception as err:
@@ -52,9 +51,9 @@ if __name__ == '__main__':
     w = MyApp()
     app.exec()
 
-    # db_init = DbInit(filename='../resources/sql.ini')
+    # db_init = DbInit(filename='resources/sql.ini', db_con_info='resources/db_properties.ini')
     # db_init.init()
-    #
-    # backup_restore = BackupRestore(db_conf='../resources/user_properties.ini')
+
+    # backup_restore = BackupRestore(db_conf='resources/user_properties.ini')
     # backup_restore.backup_data()
     # backup_restore.load_data()
