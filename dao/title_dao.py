@@ -6,13 +6,16 @@ from dao.abs_dao import Dao, iter_row
 
 
 class TitleDao(Dao):
+    def __init__(self):
+        super().__init__()
 
     def insert_item(self, code=None, name=None):
         print("\n______ {}() ______".format(inspect.stack()[0][3]))
         sql = "insert into title values(%s, %s)"
         args = (code, name)
+        print(args)
         try:
-            self.do_query(query=sql, kargs=args)
+            super().do_query(query=sql, kargs=args)
         except Error as err:
             raise err
 
@@ -21,7 +24,7 @@ class TitleDao(Dao):
         sql = "UPDATE sale SET code=%s, price=%s, saleCnt=%s, marginRate=%s WHERE no={}"
         args = (code, price, saleCnt, marginPrice, no)
         try:
-            self.do_query(query=sql, kargs=args)
+            super().do_query(query=sql, kargs=args)
             return True
         except Error:
             return False
@@ -31,25 +34,31 @@ class TitleDao(Dao):
         sql = "DELETE FROM sale WHERE no=%s"
         args = (no,)
         try:
-            self.do_query(query=sql, kargs=args)
+            super().do_query(query=sql, kargs=args)
             return True
         except Error:
             return False
 
     def select_item(self, no=None):
         print("\n______ {}() ______".format(inspect.stack()[0][3]))
-        try:
-            conn = self.connection_pool.get_connection()
+        with self.connection_pool as conn:
             cursor = conn.cursor()
-            sql = "SELECT no, code, price, saleCnt, marginRate FROM sale"
-            where = " where no = %s"
+            sql = "SELECT title_no, title_name FROM title"
+            where = " where title_no = %s"
             cursor.execute(sql) if no is None else cursor.execute(sql.join(where), (no,))
             res = []
             [res.append(row) for row in iter_row(cursor, 5)]
             print(res)
-            return res
-        except Error as e:
-            print(e)
-        finally:
             cursor.close()
-            conn.close()
+            return res
+
+
+
+if __name__ == '__main__':
+    # app = QApplication([])
+    # d = DepartmentTableViewWidget()
+    # t = TitleTableViewWidget()
+    # app.exec()
+    tdao = TitleDao()
+    # tdao.insert_item(6, '인턴')
+    tdao.select_item()

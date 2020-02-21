@@ -4,6 +4,7 @@ from abc import ABCMeta, abstractmethod
 from mysql.connector import Error
 
 from dbconnection.db_connecton import DatabaseConnectionPool
+from dbconnection.db_pool import DatabasePool, Config
 
 
 def iter_row(cursor, size=5):
@@ -36,19 +37,27 @@ class Dao(metaclass=ABCMeta):
     def select_item(self, **kwargs):
         raise NotImplementedError("Subclass must implement abstract method")
 
+
     def do_query(self, **kwargs):
         print("\n______ {}() ______".format(inspect.stack()[0][3]))
         try:
-            conn = self.connection_pool.get_connection()
-            cursor = conn.cursor()
-            if kwargs['p_args'] is not None:
-                cursor.execute(kwargs['query'], kwargs['kargs'])
-            else:
-                cursor.execute(kwargs['query'])
-            conn.commit()
+            config = Config('resources/user_properties.ini')
+            with DatabasePool.get_instance(config) as conn:
+                cursor = conn.cursor()
+                if 'SELECT'.lower() in kwargs['query'].lower():
+                    if kwargs['kargs'] is not None:
+                        cursor.execute(kwargs['query'], kwargs['kargs'])
+                    else:
+                        cursor.execute(kwargs['query'])
+                    conn.commit()
+                    affected = f"{cursor.rowcount} rows affected."
+                    return affected
+                else:
+                    cursor.execute(kwargs['query'])
+                    res = []
+                    [res.append(row) for row in iter_row(cursor, 5)]
+                    print(res)
+                    return res
         except Error as e:
             print(e)
             raise e
-        finally:
-            cursor.close()
-            conn.close()
